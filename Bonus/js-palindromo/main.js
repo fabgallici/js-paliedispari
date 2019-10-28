@@ -12,5 +12,5 @@ function palindroma(word) {
   return reverseWord === word;
 }
 
-isPalindromo = palindroma(inputWord);
+var isPalindromo = palindroma(inputWord);
 console.log(isPalindromo);
