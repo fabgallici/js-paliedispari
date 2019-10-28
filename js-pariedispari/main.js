@@ -10,10 +10,9 @@ function randomGenerator(max, min) {
   return intNUm;
 }
 
-
 function pariodispari(num) {
   var parodisp;
-  if (nump % 2 === 0) {
+  if (num % 2 === 0) {
     parodisp = "pari";
     // return "pari";
   } else {
@@ -24,24 +23,18 @@ function pariodispari(num) {
 }
 
 function evaluateWinner(userChoice, totalNum) {
-  var totalChoice = pariodispari(totalNum);
-  if (userChoice === totalChoice) {
-    console.log('il risultato è ' + totalNum + 'Hai Vinto');
+  var choiceResult = pariodispari(totalNum);
+  if (userChoice === choiceResult) {
+    console.log('il risultato è un numero ' + choiceResult + ", il totale risulta " + totalNum + ' quindi Hai Vinto');
   } else {
-    console.log('il risultato è ' + totalNum + 'Hai Vinto');
+    console.log('il risultato è un numero ' + choiceResult + ", il totale risulta " + totalNum + ' quindi NON hai Vinto');
   }
 }
 
 
 var pcNum = randomGenerator(5, 1);
 var sumNum = userNum + pcNum;
+evaluateWinner(userChoice, sumNum);
 
-console.log(pcNum);
 
 
-// function winnerPariDispari(num1, num2) {
-//   var numTot = num1 + num2;
-//   if (numTot % 2 === 0) {
-
-//   }
-// }
