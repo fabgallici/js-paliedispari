@@ -42,7 +42,7 @@ function pariodispari(num) {
 }
 
 // accetta una stringa "pari" o "dispari", somma number con un valore random da 1 a 5, confronta e stampa risultato vincente
-function evaluateWinner(evenOrOdd, number) {
+function evaluateWinnerVsPc(evenOrOdd, number) {
   var rndNum = randomGenerator(5, 1);
   sum = rndNum + number;
   var sumResult = pariodispari(sum);
@@ -56,7 +56,7 @@ function evaluateWinner(evenOrOdd, number) {
 var userChoice = getUserChoice();
 var userNum = getUserNum();
 
-evaluateWinner(userChoice, userNum);
+evaluateWinnerVsPc(userChoice, userNum);
 
 
 
