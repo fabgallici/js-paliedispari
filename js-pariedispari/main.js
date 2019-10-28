@@ -5,11 +5,13 @@
 var userChoice = prompt('scegli fra pari o dispari');
 var userNum = parseInt(prompt('scegli un numero fra 1 e 5'));
 
+//genera un numero random fra un valore min e max
 function randomGenerator(max, min) {
   var intNUm = Math.floor(Math.random() * (max - min + 1)) + min;
   return intNUm;
 }
 
+//ritorna pari o dispari in base al numero
 function pariodispari(num) {
   var parodisp;
   if (num % 2 === 0) {
@@ -22,19 +24,20 @@ function pariodispari(num) {
   return parodisp;
 }
 
-function evaluateWinner(userChoice, totalNum) {
-  var choiceResult = pariodispari(totalNum);
-  if (userChoice === choiceResult) {
-    console.log('il risultato è un numero ' + choiceResult + ", il totale risulta " + totalNum + ' quindi Hai Vinto');
+// choice deve essere "pari" o "dispari", somma add1 e add2, verifica se somma pari o dispari e confronta con choice, stampa risultato
+function evaluateWinner(choice, add1, add2) {
+  sum = add1 + add2;
+  var sumResult = pariodispari(sum);
+  if (choice === sumResult) {
+    console.log('Hai scelto un numero ' + choice + ", il totale risulta " + sum + ' quindi Hai Vinto');
   } else {
-    console.log('il risultato è un numero ' + choiceResult + ", il totale risulta " + totalNum + ' quindi NON hai Vinto');
+    console.log('Hai scelto un numero ' + choice + ", il totale risulta " + sum + ' quindi NON hai Vinto');
   }
 }
 
 
 var pcNum = randomGenerator(5, 1);
-var sumNum = userNum + pcNum;
-evaluateWinner(userChoice, sumNum);
+evaluateWinner(userChoice, userNum, pcNum);
 
 
 
