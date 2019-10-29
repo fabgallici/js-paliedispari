@@ -24,6 +24,8 @@ function getUserNum() {
 
 //genera un numero random fra un valore min e max
 function randomGenerator(max, min) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
   var intNUm = Math.floor(Math.random() * (max - min + 1)) + min;
   return intNUm;
 }
